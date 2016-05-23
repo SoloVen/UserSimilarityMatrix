@@ -14,6 +14,7 @@
 // for plagiarism check.
 // *********************************************************
 package a0;
+
 import java.lang.Math;
 
 public class Cfiltering {
@@ -46,10 +47,10 @@ public class Cfiltering {
    * @param numberOfMovies Determines size of matrix variables.
    */
   public Cfiltering(int numberOfUsers, int numberOfMovies) {
-      // create the userUserMatrix with the correct dimensions 
-      userUserMatrix = new float[numberOfUsers][numberOfUsers];
-      // create the userMovieMatrix with the correct dimensions 
-      userMovieMatrix = new int[numberOfUsers][numberOfMovies];
+    // create the userUserMatrix with the correct dimensions
+    userUserMatrix = new float[numberOfUsers][numberOfUsers];
+    // create the userMovieMatrix with the correct dimensions
+    userMovieMatrix = new int[numberOfUsers][numberOfMovies];
   }
 
   /**
@@ -87,23 +88,33 @@ public class Cfiltering {
    * @return COMPLETE THIS IF NEEDED
    */
   public void calculateSimilarityScore() {
-    for (int currentUser=0; currentUser<userMovieMatrix.length; currentUser++) 
-    {
-      for (int comparingUser=0; comparingUser<userMovieMatrix.length; comparingUser++) 
-      {
-         double valueInSqrt = 0; 
-         double movieRatingDifference = 0;
-         for (int comparingMovie=0; comparingMovie<userMovieMatrix[currentUser].length;
-                                                               comparingMovie++) 
-         {
-           movieRatingDifference = userMovieMatrix[currentUser][comparingMovie]
-                               - userMovieMatrix[comparingUser][comparingMovie];
-           valueInSqrt = valueInSqrt + Math.pow(movieRatingDifference, 2);
-         }
+    // for loop that keeps track of the current user
+    // this user is its own row that will have the scores compared with the
+    // other users on the same line
+    for (int currentUser =
+        0; currentUser < userMovieMatrix.length; currentUser++) {
+      // for loop that keeps track of the user that is being compared to
+      // the current user
+      for (int comparingUser =
+          0; comparingUser < userMovieMatrix.length; comparingUser++) {
+        // variable that will hold the inside of the square root of the
+        // distance formula
+        double valueInSqrt = 0;
+        // variable that holds the difference between the two users being 
+        // compared
+        double movieRatingDifference = 0;
+        // for loop that goes through the ratings of the two users and finds 
+        // their difference
+        for (int comparingMovie =
+            0; comparingMovie < userMovieMatrix[currentUser].length; comparingMovie++) {
+          movieRatingDifference = userMovieMatrix[currentUser][comparingMovie]
+              - userMovieMatrix[comparingUser][comparingMovie];
+          valueInSqrt = valueInSqrt + Math.pow(movieRatingDifference, 2);
+        }
       }
     }
   }
-  
+
 
   /*
    * TODO:COMPLETE THIS YOU ARE FREE TO CHANGE THE FUNCTION SIGNATURE BUT DO NOT
@@ -120,14 +131,12 @@ public class Cfiltering {
    */
 
   public void printUserUserMatrix() {
-      for(int column=0; column<userUserMatrix.length; column++)
-      {
-        for(int row=0; row<userUserMatrix[column].length; row++)
-        {
-          System.out.print(userUserMatrix[column][row] + " ");
-        }
-        System.out.println("");
+    for (int column = 0; column < userUserMatrix.length; column++) {
+      for (int row = 0; row < userUserMatrix[column].length; row++) {
+        System.out.print(userUserMatrix[column][row] + " ");
       }
+      System.out.println("");
+    }
   }
 
   /*
