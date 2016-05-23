@@ -47,6 +47,8 @@ public class Cfiltering {
   public Cfiltering(int numberOfUsers, int numberOfMovies) {
       // create the userUserMatrix with the correct dimensions 
       userUserMatrix = new float[numberOfUsers][numberOfUsers];
+      // create the userMovieMatrix with the correct dimensions 
+      userMovieMatrix = new int[numberOfUsers][numberOfMovies];
   }
 
   /**
