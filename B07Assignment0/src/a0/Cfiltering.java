@@ -14,6 +14,7 @@
 // for plagiarism check.
 // *********************************************************
 package a0;
+import java.lang.Math;
 
 public class Cfiltering {
   // this is a 2d matrix i.e. user*movie
@@ -86,7 +87,21 @@ public class Cfiltering {
    * @return COMPLETE THIS IF NEEDED
    */
   public void calculateSimilarityScore() {
-
+    for (int currentUser=0; currentUser<userMovieMatrix.length; currentUser++) 
+    {
+      for (int comparingUser=0; comparingUser<userMovieMatrix.length; comparingUser++) 
+      {
+         double valueInSqrt = 0; 
+         double movieRatingDifference = 0;
+         for (int comparingMovie=0; comparingMovie<userMovieMatrix[currentUser].length;
+                                                               comparingMovie++) 
+         {
+           movieRatingDifference = userMovieMatrix[currentUser][comparingMovie]
+                               - userMovieMatrix[comparingUser][comparingMovie];
+           valueInSqrt = valueInSqrt + Math.pow(movieRatingDifference, 2);
+         }
+      }
+    }
   }
   
 
@@ -105,7 +120,14 @@ public class Cfiltering {
    */
 
   public void printUserUserMatrix() {
-
+      for(int column=0; column<userUserMatrix.length; column++)
+      {
+        for(int row=0; row<userUserMatrix[column].length; row++)
+        {
+          System.out.print(userUserMatrix[column][row] + " ");
+        }
+        System.out.println("");
+      }
   }
 
   /*
