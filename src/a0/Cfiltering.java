@@ -45,7 +45,8 @@ public class Cfiltering {
    * @param numberOfMovies Determines size of matrix variables.
    */
   public Cfiltering(int numberOfUsers, int numberOfMovies) {
-
+      // create the userUserMatrix with the correct dimensions 
+      userUserMatrix = new float[numberOfUsers][numberOfUsers];
   }
 
   /**
@@ -85,6 +86,7 @@ public class Cfiltering {
   public void calculateSimilarityScore() {
 
   }
+  
 
   /*
    * TODO:COMPLETE THIS YOU ARE FREE TO CHANGE THE FUNCTION SIGNATURE BUT DO NOT
