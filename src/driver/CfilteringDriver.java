@@ -1,8 +1,8 @@
 // **********************************************************
 // Assignment0:
-// UTORID:
-// UT Student #:
-// Author:
+// UTORID:kushtovm
+// UT Student #:1002301797
+// Author:Lors Kushtov
 //
 //
 // Honor Code: I pledge that this program represents my own
@@ -44,8 +44,6 @@ public class CfilteringDriver {
       // Read dimensions: number of users and number of movies
       int numberOfUsers = Integer.parseInt(br.readLine());
       int numberOfMovies = Integer.parseInt(br.readLine());
-      System.out.println("For debugging:#Users = " + numberOfUsers);
-      System.out.println("For debugging:#Movies= " + numberOfMovies);
 
       /*
        * create a new Cfiltering object that contains: a) 2d matrix
@@ -71,7 +69,6 @@ public class CfilteringDriver {
           // make the String number into an integer
           int userRating = Integer.parseInt(singleRating);;
           // populate userMovieMatrix
-          System.out.println("For debugging:Rating is :" + singleRating);
           // TODO: COMPLETE THIS I.E. POPULATE THE USER_MOVIE MATRIX
           cfObject.populateUserMovieMatrix(rowNumber, columnNumber, userRating);
           columnNumber++;
@@ -79,7 +76,6 @@ public class CfilteringDriver {
         rowNumber++;
       }
       // close the file
-      System.out.println("For debugging:Finished reading file");
       fStream.close();
 
       /*
