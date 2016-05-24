@@ -99,13 +99,13 @@ public class Cfiltering {
         // variable that will hold the inside of the square root of the
         // distance formula
         double valueInSqrt = 0;
-        // variable that holds the difference between the two users being 
+        // variable that holds the difference between the two users being
         // compared
         float movieRatingDifference = 0;
-        // for loop that goes through the ratings of the two users and finds 
+        // for loop that goes through the ratings of the two users and finds
         // their difference
         double similarityScore = 0;
-        for (int comparingMovie = 
+        for (int comparingMovie =
             0; comparingMovie < userMovieMatrix[currentUser].length; comparingMovie++) {
           movieRatingDifference = userMovieMatrix[currentUser][comparingMovie]
               - userMovieMatrix[comparingUser][comparingMovie];
@@ -113,13 +113,13 @@ public class Cfiltering {
         }
         similarityScore = 1 / (1 + Math.sqrt(valueInSqrt));
         // next 3 lines round similarity score off to 4 decimal places
-        similarityScore = similarityScore*100000;
+        similarityScore = similarityScore * 10000;
         similarityScore = (int) similarityScore;
-        similarityScore = similarityScore/100000;
+        similarityScore = similarityScore / 10000;
         userUserMatrix[currentUser][comparingUser] = (float) similarityScore;
-        }
       }
     }
+  }
 
 
 
@@ -142,11 +142,10 @@ public class Cfiltering {
     for (int column = 0; column < userUserMatrix.length; column++) {
       System.out.print('[');
       for (int row = 0; row < userUserMatrix[column].length; row++) {
-        System.out.printf("%.4f",userUserMatrix[column][row]);
+        System.out.printf("%.4f", userUserMatrix[column][row]);
         if (row != (userUserMatrix[column].length - 1)) {
           System.out.print(", ");
         }
-        
       }
       System.out.println(']');
     }
@@ -166,7 +165,25 @@ public class Cfiltering {
    */
 
   public void findAndprintMostSimilarPairOfUsers() {
-
+    float mSimilarScore = 0;
+    String user1 = "";
+    String user2 = "";
+    float currentScore;
+    for (int column = 0; column < userUserMatrix.length; column++) {
+      for (int row = 0; row < userUserMatrix[column].length; row++) {
+        currentScore = userUserMatrix[column][row];
+        if (currentScore > mSimilarScore && row != column){
+          mSimilarScore = currentScore;
+          user1 = "User" + Integer.toString(column+1);
+          user2 = "User" + Integer.toString(row+1);
+        }
+      }
+    }
+    System.out.println(
+        "The most similar pairs of users from above " + "userUserMatrix are: ");
+    System.out.println(user1 + " and " + user2);
+    System.out.print("with similarity score of ");
+    System.out.println(mSimilarScore);
   }
 
   /*
