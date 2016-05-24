@@ -189,6 +189,7 @@ public class Cfiltering {
         }
       }
     }
+    // prints in correct format
     System.out.println(
         "The most similar pairs of users from above " + "userUserMatrix are: ");
     System.out.println(user1 + " and " + user2);
@@ -214,9 +215,13 @@ public class Cfiltering {
     String user1 = "";
     String user2 = "";
     float currentScore;
+    // for loop that keeps track of the column / current user
     for (int column = 0; column < userUserMatrix.length; column++) {
+      // for loop that keeps track of the row / compared user
       for (int row = 0; row < userUserMatrix[column].length; row++) {
+        // stores the current similarity score
         currentScore = userUserMatrix[column][row];
+        // compares the similarity score to the one that is greatest currently
         if (currentScore < mDissimilarScore && row != column) {
           mDissimilarScore = currentScore;
           user1 = "User" + Integer.toString(column + 1);
