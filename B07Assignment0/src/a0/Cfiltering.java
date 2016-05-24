@@ -113,9 +113,9 @@ public class Cfiltering {
         }
         similarityScore = 1 / (1 + Math.sqrt(valueInSqrt));
         // next 3 lines round similarity score off to 4 decimal places
-        similarityScore = similarityScore*10000;
+        similarityScore = similarityScore*100000;
         similarityScore = (int) similarityScore;
-        similarityScore = similarityScore/10000;
+        similarityScore = similarityScore/100000;
         userUserMatrix[currentUser][comparingUser] = (float) similarityScore;
         }
       }
@@ -138,11 +138,17 @@ public class Cfiltering {
    */
 
   public void printUserUserMatrix() {
+    System.out.println("userUserMatrix is:");
     for (int column = 0; column < userUserMatrix.length; column++) {
+      System.out.print('[');
       for (int row = 0; row < userUserMatrix[column].length; row++) {
-        System.out.print(userUserMatrix[column][row] + " ");
+        System.out.printf("%.4f",userUserMatrix[column][row]);
+        if (row != (userUserMatrix[column].length - 1)) {
+          System.out.print(", ");
+        }
+        
       }
-      System.out.println("");
+      System.out.println(']');
     }
   }
 
