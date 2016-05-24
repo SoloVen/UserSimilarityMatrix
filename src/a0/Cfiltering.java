@@ -1,8 +1,8 @@
 // **********************************************************
 // Assignment0:
-// UTORID:
-// UT Student #:
-// Author:
+// UTORID:kushtovm
+// UT Student #:1002301797
+// Author:Lors Kushtov
 //
 //
 // Honor Code: I pledge that this program represents my own
@@ -139,10 +139,16 @@ public class Cfiltering {
 
   public void printUserUserMatrix() {
     System.out.println("userUserMatrix is:");
+    // for loop that keeps track of what column it is currently at
+    // this is the current user variable
     for (int column = 0; column < userUserMatrix.length; column++) {
       System.out.print('[');
+      // for loop that keeps track of what row it is currently at
+      // this is the user that the current user is being compared to
       for (int row = 0; row < userUserMatrix[column].length; row++) {
         System.out.printf("%.4f", userUserMatrix[column][row]);
+        // only adds the comma and space if the score isnt at the end of the
+        // line
         if (row != (userUserMatrix[column].length - 1)) {
           System.out.print(", ");
         }
@@ -169,13 +175,17 @@ public class Cfiltering {
     String user1 = "";
     String user2 = "";
     float currentScore;
+    // for loop that keeps track of the column / current user
     for (int column = 0; column < userUserMatrix.length; column++) {
+      // for loop that keeps track of the row / compared user
       for (int row = 0; row < userUserMatrix[column].length; row++) {
+        // stores the current similarity score
         currentScore = userUserMatrix[column][row];
-        if (currentScore > mSimilarScore && row != column){
+        // compares the similarity score to the one that is greatest currently
+        if (currentScore > mSimilarScore && row != column) {
           mSimilarScore = currentScore;
-          user1 = "User" + Integer.toString(column+1);
-          user2 = "User" + Integer.toString(row+1);
+          user1 = "User" + Integer.toString(column + 1);
+          user2 = "User" + Integer.toString(row + 1);
         }
       }
     }
@@ -207,10 +217,10 @@ public class Cfiltering {
     for (int column = 0; column < userUserMatrix.length; column++) {
       for (int row = 0; row < userUserMatrix[column].length; row++) {
         currentScore = userUserMatrix[column][row];
-        if (currentScore < mDissimilarScore && row != column){
+        if (currentScore < mDissimilarScore && row != column) {
           mDissimilarScore = currentScore;
-          user1 = "User" + Integer.toString(column+1);
-          user2 = "User" + Integer.toString(row+1);
+          user1 = "User" + Integer.toString(column + 1);
+          user2 = "User" + Integer.toString(row + 1);
         }
       }
     }
