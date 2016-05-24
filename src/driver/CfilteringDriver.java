@@ -27,8 +27,8 @@ import a0.Cfiltering;
 public class CfilteringDriver {
 
   /**
-   * Reads user movie ratings from a text file, calculates similarity scores 
-   * and prints a score matrix.
+   * Reads user movie ratings from a text file, calculates similarity scores and
+   * prints a score matrix.
    */
   public static void main(String[] args) {
     try {
@@ -64,17 +64,17 @@ public class CfilteringDriver {
       while ((row = br.readLine()) != null) {
         // allRatings is a list of all String numbers on one row
         String allRatings[] = row.split(" ");
-        
+
         int columnNumber = 0;
         for (String singleRating : allRatings) {
-          
+
           // make the String number into an integer
           int userRating = Integer.parseInt(singleRating);;
           // populate userMovieMatrix
           System.out.println("For debugging:Rating is :" + singleRating);
           // TODO: COMPLETE THIS I.E. POPULATE THE USER_MOVIE MATRIX
           cfObject.populateUserMovieMatrix(rowNumber, columnNumber, userRating);
-          columnNumber++;   
+          columnNumber++;
         }
         rowNumber++;
       }
@@ -87,14 +87,14 @@ public class CfilteringDriver {
        * FOLLOWING)
        */
       // TODO:1.) CALCULATE THE SIMILARITY SCORE BETWEEN USERS.
-         cfObject.calculateSimilarityScore();
+      cfObject.calculateSimilarityScore();
       // TODO:2.) PRINT OUT THE userUserMatrix
-         cfObject.printUserUserMatrix(); 
+      cfObject.printUserUserMatrix();
       // TODO:3.) PRINT OUT THE MOST SIMILAR PAIRS OF USER AND THE MOST
-         cfObject.findAndprintMostSimilarPairOfUsers();
+      cfObject.findAndprintMostSimilarPairOfUsers();
       // DISSIMILAR
       // PAIR OF USERS.
-         cfObject.findAndprintMostDissimilarPairOfUsers();
+      cfObject.findAndprintMostDissimilarPairOfUsers();
     } catch (FileNotFoundException e) {
       System.err.println("Do you have the input file in the root folder "
           + "of your project?");
