@@ -65,7 +65,6 @@ public class Cfiltering {
    */
   public void populateUserMovieMatrix(int rowNumber, int columnNumber,
       int ratingValue) {
-
     userMovieMatrix[rowNumber][columnNumber] = ratingValue;
   }
 
@@ -102,18 +101,26 @@ public class Cfiltering {
         double valueInSqrt = 0;
         // variable that holds the difference between the two users being 
         // compared
-        double movieRatingDifference = 0;
+        float movieRatingDifference = 0;
         // for loop that goes through the ratings of the two users and finds 
         // their difference
-        for (int comparingMovie =
+        double similarityScore = 0;
+        for (int comparingMovie = 
             0; comparingMovie < userMovieMatrix[currentUser].length; comparingMovie++) {
           movieRatingDifference = userMovieMatrix[currentUser][comparingMovie]
               - userMovieMatrix[comparingUser][comparingMovie];
           valueInSqrt = valueInSqrt + Math.pow(movieRatingDifference, 2);
         }
+        similarityScore = 1 / (1 + Math.sqrt(valueInSqrt));
+        // next 3 lines round similarity score off to 4 decimal places
+        similarityScore = similarityScore*10000;
+        similarityScore = (int) similarityScore;
+        similarityScore = similarityScore/10000;
+        userUserMatrix[currentUser][comparingUser] = (float) similarityScore;
+        }
       }
     }
-  }
+
 
 
   /*
