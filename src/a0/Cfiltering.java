@@ -183,7 +183,8 @@ public class Cfiltering {
         "The most similar pairs of users from above " + "userUserMatrix are: ");
     System.out.println(user1 + " and " + user2);
     System.out.print("with similarity score of ");
-    System.out.println(mSimilarScore);
+    System.out.printf("%.4f", mSimilarScore);
+    System.out.println("");
   }
 
   /*
@@ -199,6 +200,25 @@ public class Cfiltering {
    * @return COMPLETE THIS IF NEEDED
    */
   public void findAndprintMostDissimilarPairOfUsers() {
-
+    float mDissimilarScore = 1;
+    String user1 = "";
+    String user2 = "";
+    float currentScore;
+    for (int column = 0; column < userUserMatrix.length; column++) {
+      for (int row = 0; row < userUserMatrix[column].length; row++) {
+        currentScore = userUserMatrix[column][row];
+        if (currentScore < mDissimilarScore && row != column){
+          mDissimilarScore = currentScore;
+          user1 = "User" + Integer.toString(column+1);
+          user2 = "User" + Integer.toString(row+1);
+        }
+      }
+    }
+    System.out.println(
+        "The most dissimilar pairs of users from above userUserMatrix are: ");
+    System.out.println(user1 + " and " + user2);
+    System.out.print("with similarity score of ");
+    System.out.printf("%.4f", mDissimilarScore);
+    System.out.println("");
   }
 }
