@@ -1,0 +1,225 @@
++++ASSIGNMENT0 MARK DETAIL+++
+Your mark out of 10 is: [  6.5 :/10] 
+This assignment has been marked by TA (Kirisanth k.ganeshamoorthy@mail.utoronto.ca): 
+If you have any questions about your mark, contact the above TA first
+
+
+
+PART 1) +++SVN CHECKOUT ON YOUR ASSIGNMENT0+++
+A    B07Assignment0/src
+A    B07Assignment0/src/a0
+A    B07Assignment0/src/a0/Cfiltering.java
+A    B07Assignment0/src/driver
+A    B07Assignment0/src/driver/CfilteringDriver.java
+A    B07Assignment0/input1.txt
+A    B07Assignment0/input2.txt
+Checked out revision 23.
+
+
+
+PART 2) +++SVN COMMIT LOGS ARE+++
+------------------------------------------------------------------------
+r23 | kushtovm@UTORONTO.CA | 2016-05-23 23:58:14 -0400 (Mon, 23 May 2016) | 1 line
+
+optimized cfilteringdriver.java
+------------------------------------------------------------------------
+r22 | kushtovm@UTORONTO.CA | 2016-05-23 23:57:59 -0400 (Mon, 23 May 2016) | 2 lines
+
+optimized cfiltering.java
+
+------------------------------------------------------------------------
+r21 | kushtovm@UTORONTO.CA | 2016-05-23 23:47:48 -0400 (Mon, 23 May 2016) | 1 line
+
+added more function calls to get the desired output
+------------------------------------------------------------------------
+r20 | kushtovm@UTORONTO.CA | 2016-05-23 23:47:20 -0400 (Mon, 23 May 2016) | 1 line
+
+completed the findandprintMostDissimilarPairOfUsers() method
+------------------------------------------------------------------------
+r19 | kushtovm@UTORONTO.CA | 2016-05-23 23:38:08 -0400 (Mon, 23 May 2016) | 1 line
+
+completed the finding and printing of the most similar pair 
+------------------------------------------------------------------------
+r18 | kushtovm@UTORONTO.CA | 2016-05-23 23:16:36 -0400 (Mon, 23 May 2016) | 1 line
+
+added lines that run the methods in Cfiltering.java
+------------------------------------------------------------------------
+r17 | kushtovm@UTORONTO.CA | 2016-05-23 23:16:04 -0400 (Mon, 23 May 2016) | 1 line
+
+corrected formatting of printUserUserMatrix
+------------------------------------------------------------------------
+r16 | kushtovm@UTORONTO.CA | 2016-05-23 22:53:31 -0400 (Mon, 23 May 2016) | 1 line
+
+optimized calculateSimilarityScore() method
+------------------------------------------------------------------------
+r15 | kushtovm@UTORONTO.CA | 2016-05-23 19:24:19 -0400 (Mon, 23 May 2016) | 1 line
+
+Added comments to calculateSimilarityScore()
+------------------------------------------------------------------------
+r14 | kushtovm@UTORONTO.CA | 2016-05-23 18:27:28 -0400 (Mon, 23 May 2016) | 1 line
+
+version 1 of calculateSimilarityScore()
+------------------------------------------------------------------------
+r13 | kushtovm@UTORONTO.CA | 2016-05-23 16:09:43 -0400 (Mon, 23 May 2016) | 1 line
+
+Constructed the userMovieMatrix
+------------------------------------------------------------------------
+r12 | kushtovm@UTORONTO.CA | 2016-05-23 16:04:35 -0400 (Mon, 23 May 2016) | 1 line
+
+constructed the userUserMatrix array
+------------------------------------------------------------------------
+r11 | kushtovm@UTORONTO.CA | 2016-05-22 00:09:54 -0400 (Sun, 22 May 2016) | 1 line
+
+commiting first time as test. no change
+------------------------------------------------------------------------
+r10 | kushtovm@UTORONTO.CA | 2016-05-21 23:46:51 -0400 (Sat, 21 May 2016) | 1 line
+
+checking xml source>format. no change from previous revision
+------------------------------------------------------------------------
+r4 | attarwal@UTORONTO.CA | 2016-05-14 19:29:16 -0400 (Sat, 14 May 2016) | 1 line
+
+Starter code by instructor
+------------------------------------------------------------------------
+r3 | attarwal@UTORONTO.CA | 2016-05-14 19:29:15 -0400 (Sat, 14 May 2016) | 1 line
+
+Starter code by instructor
+------------------------------------------------------------------------
+r2 | attarwal@UTORONTO.CA | 2016-05-14 19:29:14 -0400 (Sat, 14 May 2016) | 1 line
+
+Starter code by instructor
+------------------------------------------------------------------------
+Marks Deductions here: 0
+
+
+
+PART 3) +++FOLLOWING LINES ARE GREATER THAN 80 CHARACTERS+++
+            0; comparingMovie < userMovieMatrix[currentUser].length; comparingMovie++) {
+Marks Deductions here: 1
+
+
+
+PART 4) +++TEST FOLDER WITH TEST FILES IN IT?+++
+svn: 'B07Assignment0/test' is not under version control
+Marks Deductions here: 1
+
+
+
+PART 5) +++HONOR CODE?+++
+// **********************************************************
+// Assignment0:
+// UTORID:kushtovm
+// UT Student #:1002301797
+// Author:Lors Kushtov
+//
+//
+// Honor Code: I pledge that this program represents my own
+// program code and that I have coded on my own. I received
+// help from no one in designing and debugging my program.
+// I have also read the plagiarism section in the course info
+// sheet of CSC B07 and understand the consequences. In this semester
+// we will select any three of your assignments from total of 5 and run it
+// for plagiarism check.
+Marks Deductions here: 0
+
+
+
+PART 6) +++IDE FILES+++
+Marks Deductions here: 0
+
+
+
+PART 7) +++STATIC FUNCTIONS IN YOUR CODE+++
+Marks Deductions here: 0
+
+
+
+PART 8) +++COMMENTS IN cFiltering.java
+Marks Deductions here: 0
+// for plagiarism check.
+// *********************************************************
+  // this is a 2d matrix i.e. user*movie
+  // this is a 2d matrix i.e. user*movie
+    // this is 2d matrix of size 1*1
+    // this is 2d matrix of size 1*1
+    // create the userUserMatrix with the correct dimensions
+    // create the userMovieMatrix with the correct dimensions
+    // for loop that keeps track of the current user
+    // this user is its own row that will have the scores compared with the
+    // other users on the same line
+      // for loop that keeps track of the user that is being compared to
+      // the current user
+        // variable that will hold the inside of the square root of the
+        // distance formula
+        // variable that holds the difference between the two users being
+        // compared
+        // for loop that goes through the ratings of the two users and finds
+        // their difference
+        // next 3 lines round similarity score off to 4 decimal places
+    // for loop that keeps track of what column it is currently at
+    // this is the current user variable
+      // for loop that keeps track of what row it is currently at
+      // this is the user that the current user is being compared to
+        // only adds the comma and space if the score isnt at the end of the
+        // line
+    // for loop that keeps track of the column / current user
+      // for loop that keeps track of the row / compared user
+        // stores the current similarity score
+        // compares the similarity score to the one that is greatest currently
+
+
+
+PART 9) +++COMPILING YOUR CODE+++
+Marks Deductions here: 0
+
+
+
++++RUNNING YOUR CODE+++
+PART 10) +++RUNNING TESTCASE1+++
+Marks Deductions here: .5
+Enter the name of input file? 
+userUserMatrix is:
+[1.0000, 1.0000, 1.0000, 1.0000]
+[1.0000, 1.0000, 1.0000, 1.0000]
+[1.0000, 1.0000, 1.0000, 1.0000]
+[1.0000, 1.0000, 1.0000, 1.0000]
+The most similar pairs of users from above userUserMatrix are: 
+User1 and User2
+with similarity score of 1.0000
+The most dissimilar pairs of users from above userUserMatrix are: 
+ and 
+with similarity score of 1.0000
+
+
+
+PART 11) +++RUNNING TESTCASE2+++
+Marks Deductions here: .5
+Enter the name of input file? 
+userUserMatrix is:
+[1.0000, 1.0000, 0.1005, 0.1005]
+[1.0000, 1.0000, 0.1005, 0.1005]
+[0.1005, 0.1005, 1.0000, 1.0000]
+[0.1005, 0.1005, 1.0000, 1.0000]
+The most similar pairs of users from above userUserMatrix are: 
+User1 and User2
+with similarity score of 1.0000
+The most dissimilar pairs of users from above userUserMatrix are: 
+User1 and User3
+with similarity score of 0.1005
+
+
+
+PART 12) +++RUNNING TESTCASE3+++
+Marks Deductions here: .5
+Enter the name of input file? 
+userUserMatrix is:
+[1.0000, 0.1081, 0.1081, 0.1081, 1.0000]
+[0.1081, 1.0000, 1.0000, 1.0000, 0.1081]
+[0.1081, 1.0000, 1.0000, 1.0000, 0.1081]
+[0.1081, 1.0000, 1.0000, 1.0000, 0.1081]
+[1.0000, 0.1081, 0.1081, 0.1081, 1.0000]
+The most similar pairs of users from above userUserMatrix are: 
+User1 and User5
+with similarity score of 1.0000
+The most dissimilar pairs of users from above userUserMatrix are: 
+User1 and User2
+with similarity score of 0.1081
