@@ -33,10 +33,7 @@ public class Cfiltering {
     userUserMatrix = new float[1][1];
   }
 
-  /*
-   * TODO:COMPLETE THIS I.E. APPROPRIATELY CREATE THE userMovieMatrix AND
-   * userUserMatrix WITH CORRECT DIMENSIONS.
-   */
+
   /**
    * Constructs an object which contains two 2d matrices, one of size
    * users*movies which will store integer movie ratings and one of size
@@ -68,14 +65,7 @@ public class Cfiltering {
     userMovieMatrix[rowNumber][columnNumber] = ratingValue;
   }
 
-  /*
-   * TODO:COMPLETE THIS YOU ARE FREE TO CHANGE THE FUNCTION SIGNATURE BUT DO NOT
-   * CHANGE THE FUNCTION NAME AND DO NOT MAKE THIS FUNCTION STATIC. Add/remove
-   * 
-   * @param AND
-   * 
-   * @return as required below.
-   */
+
   /**
    * Determines how similar each pair of users is based on their ratings. This
    * similarity value is represented with with a float value between 0 and 1,
@@ -123,10 +113,6 @@ public class Cfiltering {
 
 
 
-  /*
-   * TODO:COMPLETE THIS YOU ARE FREE TO CHANGE THE FUNCTION SIGNATURE BUT DO NOT
-   * CHANGE THE FUNCTION NAME AND DO NOT MAKE THIS FUNCTION STATIC
-   */
   /**
    * Prints out the similarity scores of the userUserMatrix, with each row and
    * column representing each/single user and the cell position (i,j)
@@ -157,10 +143,6 @@ public class Cfiltering {
     }
   }
 
-  /*
-   * TODO:COMPLETE THIS YOU ARE FREE TO CHANGE THE FUNCTION SIGNATURE BUT DO NOT
-   * CHANGE THE FUNCTION NAME AND DO NOT MAKE THIS FUNCTION STATIC
-   */
   /**
    * This function finds and prints the most similar pair of users in the
    * userUserMatrix.
@@ -198,10 +180,6 @@ public class Cfiltering {
     System.out.println("");
   }
 
-  /*
-   * TODO:COMPLETE THIS YOU ARE FREE TO CHANGE THE FUNCTION SIGNATURE BUT DO NOT
-   * CHANGE THE FUNCTION NAME AND DO NOT MAKE THIS FUNCTION STATIC
-   */
   /**
    * This function finds and prints the most dissimilar pair of users in the
    * userUserMatrix.
